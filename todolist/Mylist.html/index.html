@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<style>
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the app */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+#categoryCompletion {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.completed {
+    color: green;
+}
+
+.overdue {
+    color: red;
+}
+
+/* Main layout styles */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Category manager styles */
+.category-manager {
+    flex: 1; /* Take 1 part of the available space */
+    padding: 20px;
+    margin-right: 10px; /* Space between categories and tasks */
+  
+}
+
+/* Task manager styles */
+.task-manager {
+    flex: 2; /* Take 2 parts of the available space */
+    padding: 10px;
+    margin-right: 10px; /* Space between tasks and analytics */
+}
+
+/* Analytics styles */
+.analytics {
+    flex: 1; /* Take 1 part of the available space */
+    padding: 10px;
+}
+
+/* Other styles can remain the same */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"], input[type="date"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}</style>
+<body>
+    <div class="container">
+        <h1>Advanced To-Do List</h1>
+
+        <div class="main-layout">
+            <div class="category-manager">
+                <h2>Categories</h2>
+                <input type="text" id="categoryInput" placeholder="Add Category">
+                <button id="addCategoryButton">Add</button>
+                <ul id="categoryList"></ul>
+            </div>
+
+            <div class="task-manager">
+                <h2>Tasks</h2>
+                <input type="text" id="taskInput" placeholder="Add Task">
+                <input type="date" id="dueDateInput">
+                <select id="categorySelect" multiple></select>
+                <button id="addTaskButton">Add Task</button>
+                <ul id="taskList"></ul>
+            </div>
+            <div class="analytics">
+                <h2>Analytics</h2>
+                <canvas id="analyticsChart"></canvas>
+                <div id="categoryCompletion"></div>
+            </div>
+            
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
