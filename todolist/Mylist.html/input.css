@@ -1,0 +1,99 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for the app */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+#categoryCompletion {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.completed {
+    color: green;
+}
+
+.overdue {
+    color: red;
+}
+
+/* Main layout styles */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Category manager styles */
+.category-manager {
+    flex: 1; /* Take 1 part of the available space */
+    padding: 10px;
+    margin-right: 10px; /* Space between categories and tasks */
+}
+
+/* Task manager styles */
+.task-manager {
+    flex: 2; /* Take 2 parts of the available space */
+    padding: 10px;
+    margin-right: 10px; /* Space between tasks and analytics */
+}
+
+/* Analytics styles */
+.analytics {
+    flex: 1; /* Take 1 part of the available space */
+    padding: 10px;
+}
+
+/* Other styles can remain the same */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"], input[type="date"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border-bottom: none;
+}
