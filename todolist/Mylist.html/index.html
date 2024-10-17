@@ -3,112 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>To-Do List</title>
 </head>
-<style>
-/* General body styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+<style>body {
+    font-family: serif;
     margin: 0;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 10px;
 }
 
-/* Container for the app */
 .container {
     max-width: 1400px;
     height: 900px;
     margin: 0 auto;
-    background: rgb(236, 238, 238);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   background-color: #E5D9F2;
+    box-shadow: rgb(61, 3, 90);
     padding: 20px;
-}
-#categoryCompletion {
-    font-family: Arial, sans-serif;
-    line-height: 2;
+   
 }
 
-.completed {
-    color: rgb(2, 8, 24);
-}
-
-.overdue {
-    color: red;
-}
-
-/* Main layout styles */
 .main-layout {
     display: flex;
     justify-content: space-between;
 }
 
-/* Category manager styles */
 .category-manager {
-    flex: 1; /* Take 1 part of the available space */
+    flex: 1;
     padding: 10px;
-    margin-right: 10px; /* Space between categories and tasks */
-  
+    margin-right: auto;
 }
 
-/* Task manager styles */
 .task-manager {
-    flex: 2; /* Take 2 parts of the available space */
-    padding: 50px;
-    margin-right: 10px; /* Space between tasks and analytics */
+    flex: 2;
+    padding: 5px;
+   margin-bottom: auto;
 }
 
-/* Analytics styles */
 .analytics {
-    flex: 1; /* Take 1 part of the available space */
-    padding: 15px;
+    flex: 1;
+    padding: 5px;
+    font-size: medium;
+    background: url(https://media.tenor.com/BEBopBnhjVEAAAAj/peach-and-goma-peach-goma.gif) right bottom;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
+   
 }
 
-/* Other styles can remain the same */
+h2 {
+    font-size: medium;
+}
+
+ h3 {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
-    color: #333;
 }
-
-h2{
-    text-align:
-}
-
-h3{
-    text-align:center;
-
-}
-
-
 
 input[type="text"], input[type="date"], select {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #b746e8;
     border-radius: 4px;
 }
 
 button {
-    background-color: #376c8f;
-    color: white;
+    background-color: #D0A2F7;
+    color: #f3f3f3;
     border: none;
     padding: 10px 15px;
     border-radius: 3px;
     cursor: pointer;
 }
 
-
 button:hover {
-    background-color: #8fa8d1;
+    background-color: #DCBFFF;
 }
-
-
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 5px;
 }
 
 li {
@@ -116,12 +92,18 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #aca0a0;
+    border-bottom: 1px solid #923be9;
 }
 
-li:last-child {
-    border-bottom: none;
-}</style>
+.completed {
+    color: rgb(83, 6, 135);
+}
+
+.overdue {
+    color: red;
+}
+
+</style>
 <body>
     <div class="container">
         <h1>Advanced Todo List</h1>
@@ -136,9 +118,8 @@ li:last-child {
             </div>
 
             <div class="task-manager">
-                
                 <label for="task">Task:</label><br>
-                <input type="text" id="taskInput" placeholder="New Task">
+                <input type="text" id="taskInput" placeholder="Add New Task">
                 <label for="duedate">Due Date:</label><br>
                 <input type="date" id="dueDateInput"><br>
                 <label for="categories">Categories:</label><br>
@@ -152,11 +133,10 @@ li:last-child {
                 <canvas id="analyticsChart"></canvas>
                 <div id="categoryCompletion"></div>
             </div>
-            
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
