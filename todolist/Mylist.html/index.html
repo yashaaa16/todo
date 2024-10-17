@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>To-Do List</title>
 </head>
 <style>
@@ -16,20 +17,21 @@ body {
 
 /* Container for the app */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
+    height: 900px;
     margin: 0 auto;
-    background: white;
+    background: rgb(236, 238, 238);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 #categoryCompletion {
     font-family: Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 2;
 }
 
 .completed {
-    color: green;
+    color: rgb(2, 8, 24);
 }
 
 .overdue {
@@ -45,7 +47,7 @@ body {
 /* Category manager styles */
 .category-manager {
     flex: 1; /* Take 1 part of the available space */
-    padding: 20px;
+    padding: 10px;
     margin-right: 10px; /* Space between categories and tasks */
   
 }
@@ -53,21 +55,32 @@ body {
 /* Task manager styles */
 .task-manager {
     flex: 2; /* Take 2 parts of the available space */
-    padding: 10px;
+    padding: 50px;
     margin-right: 10px; /* Space between tasks and analytics */
 }
 
 /* Analytics styles */
 .analytics {
     flex: 1; /* Take 1 part of the available space */
-    padding: 10px;
+    padding: 15px;
 }
 
 /* Other styles can remain the same */
-h1, h2 {
+h1 {
     text-align: center;
     color: #333;
 }
+
+h2{
+    text-align:
+}
+
+h3{
+    text-align:center;
+
+}
+
+
 
 input[type="text"], input[type="date"], select {
     width: calc(100% - 20px);
@@ -78,17 +91,20 @@ input[type="text"], input[type="date"], select {
 }
 
 button {
-    background-color: #5cb85c;
+    background-color: #376c8f;
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
+
 button:hover {
-    background-color: #4cae4c;
+    background-color: #8fa8d1;
 }
+
+
 
 ul {
     list-style-type: none;
@@ -100,7 +116,7 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #aca0a0;
 }
 
 li:last-child {
@@ -108,22 +124,27 @@ li:last-child {
 }</style>
 <body>
     <div class="container">
-        <h1>Advanced To-Do List</h1>
+        <h1>Advanced Todo List</h1>
 
         <div class="main-layout">
             <div class="category-manager">
                 <h2>Categories</h2>
                 <input type="text" id="categoryInput" placeholder="Add Category">
                 <button id="addCategoryButton">Add</button>
+                <h2>Category List</h2>
                 <ul id="categoryList"></ul>
             </div>
 
             <div class="task-manager">
-                <h2>Tasks</h2>
-                <input type="text" id="taskInput" placeholder="Add Task">
-                <input type="date" id="dueDateInput">
+                
+                <label for="task">Task:</label><br>
+                <input type="text" id="taskInput" placeholder="New Task">
+                <label for="duedate">Due Date:</label><br>
+                <input type="date" id="dueDateInput"><br>
+                <label for="categories">Categories:</label><br>
                 <select id="categorySelect" multiple></select>
                 <button id="addTaskButton">Add Task</button>
+                <h3>Task List</h3>
                 <ul id="taskList"></ul>
             </div>
             <div class="analytics">
